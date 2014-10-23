@@ -7,7 +7,7 @@ import exam.shop.dto.*;
 
 public class ItemCatalogImpl implements ItemCatalog {
 
-	private ItemDAOImpl itemDAOImpl;
+	private ItemDAO itemDAOImpl;
 	
 	public void setItemDAOImpl(ItemDAO itemDAOImpl) {
 		this.itemDAOImpl = itemDAOImpl;
