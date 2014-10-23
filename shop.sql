@@ -9,3 +9,4 @@ create table item
 	description varchar2(2000)
 
 )
+

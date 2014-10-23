@@ -6,6 +6,6 @@ import exam.shop.dto.*;
 
 public interface ItemDAO {
 	
-	List<ItemDTO> findAll();
+	List<Item> findAll();
 
 }

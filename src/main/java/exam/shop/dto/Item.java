@@ -1,12 +1,16 @@
 package exam.shop.dto;
 
-public class ItemDTO {
+public class Item {
 	
 	private int itemId;
 	private String itemName;
 	private int price;	
 	private String description;
 	private String pictureUrl;
+	
+	public Item(int itemId, String itemName, String description, int price, String pictureUrl) {
+		
+	}
 	
 	public int getItemId() {
 		return itemId;
