@@ -19,6 +19,10 @@ public class ItemCatalogImpl implements ItemCatalog {
 		
 		List<Item> list = itemDAOImpl.findAll();
 		
+		
+		
+		//
+		
 		return null;
 	}
 
