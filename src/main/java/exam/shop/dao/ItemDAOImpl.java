@@ -16,11 +16,6 @@ public class ItemDAOImpl implements ItemDAO {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
-	public ItemDAOImpl() {
-		// TODO Auto-generated constructor stub
-		
-	}
-
 	@Override
 	public List<Item> findAll() {
 		// TODO Auto-generated method stub
@@ -34,16 +29,34 @@ public class ItemDAOImpl implements ItemDAO {
 				// TODO Auto-generated method stub
 				Item item = new Item(rs.getInt("item_id"),
 									 rs.getString("item_name"),
-									 rs.getString("describtion"),
+									 rs.getString("description"),
 									 rs.getInt("price"),
 									 rs.getString("picture_url"));
 				
 				return item;
 			}
 			
-		});
-		
+		});		
 		return list;
 	}
+	
+	@Override
+	public Item findByItemId(int itemId) {
+		String sql="select * from items where item_id=?";
+		
+		Item item = jdbcTemplate.queryForObject(sql, new Object[] { itemId }, new RowMapper<Item>(){
 
+			@Override
+			public Item mapRow(ResultSet rs, int arg1) throws SQLException {
+				// TODO Auto-generated method stub
+				Item item = new Item(rs.getInt("item_id"),
+								  	 rs.getString("item_name"),
+									 rs.getString("description"),
+									 rs.getInt("price"),
+									 rs.getString("picture_url"));
+				return item;
+			}			
+		});
+		return item;		
+	}
 }

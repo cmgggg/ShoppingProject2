@@ -6,11 +6,12 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
-	<!-- DataSource 설정 -->
+	
 	<!-- BasicDataSource dataSource = new BasicDataSource() 
 		
 	-->	
 	
+	<!-- DataSource 설정 -->
 	<bean id="dataSource" 
 		  class="org.apache.commons.dbcp.BasicDataSource" 
 		  p:driverClassName="oracle.jdbc.driver.OracleDriver"

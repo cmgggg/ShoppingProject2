@@ -18,18 +18,16 @@ public class ItemCatalogImpl implements ItemCatalog {
 		// TODO Auto-generated method stub
 		
 		List<Item> list = itemDAOImpl.findAll();
+		System.out.println("ItemCatalogImpl");		
 		
-		
-		
-		//
-		
-		return null;
+		return list;
 	}
 
 	@Override
 	public Item getItemByItemId(int itemId) {
 		// TODO Auto-generated method stub
-		return null;
+		//System.out.println("ItemCatalogImpl + itemId");
+		return itemDAOImpl.findByItemId(itemId);
 	}	
 
 }
